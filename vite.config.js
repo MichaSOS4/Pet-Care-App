@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 
 export default defineConfig({
-  base: '/Pet-Care-App',
+  base: '/Pet-Care',
   plugins: [react(),
     VitePWA({
       registerType: 'autoUpdate',
@@ -15,7 +15,7 @@ export default defineConfig({
         name: 'Dog App',
         short_name: 'DogApp',
         description: 'An app to save your animal details',
-        start_url: '/Pet-Care-App',
+        start_url: '/Pet-Care',
         scope: '/Pet-Care-App/',
         display: 'standalone',
         icons: [
