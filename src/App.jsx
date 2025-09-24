@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route } from "react-router-dom"
+import { createHashRouter, RouterProvider } from "react-router-dom"
 import Notatki from './pages/Notatki/Notatki'
 import Wydatki from './pages/Wydatki/Wydatki'
 import Weterynarz from './pages/Weterynarz/Weterynarz'
@@ -93,16 +93,9 @@ const router = createHashRouter([
 
   return (
     <>
-     <Routes>
-        <Route path = "/kalendarz" element = {<Kalendarz handlePushEvent = {handlePushEvent} handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes} events = {events}/>}/>
-        <Route path = "/" element = {<HomePage theme = {theme} setTheme = {setTheme}/>}/>
-        <Route path = "/szczepienia" element = {<Szczepienia setEvents = {setEvents} events = {events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>}/>
-        <Route path = "/weterynarz" element = {<Weterynarz setEvents = {setEvents} events ={events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>}/>
-        <Route path = "/wydatki" element = {<Wydatki money = {money} sum = {sum} handlePushToSum = {handlePushToSum} setSum = {setSum}/>}/>
-        <Route path = "/lekarstwa" element = {<Lekarstwa meds = {meds} handlePushMedicine = {handlePushMedicine}/>}/>
-        <Route path = "/notatki" element = {<Notatki handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes}/>}/>
-        <Route path = "/waga" element = {<Waga  handlePushEvent = {handlePushEvent}/>}/>
-     </Routes>
+     <RouterProvider  router = {router}>
+    
+     </RouterProvider>
     
     </>
   )
