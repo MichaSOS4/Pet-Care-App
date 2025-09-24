@@ -71,22 +71,22 @@ const router = createHashRouter([
       {path: '/Pet-Care-App',
         element : <HomePage theme = {theme} setTheme = {setTheme}/>
       },
-      {path: '//Pet-Care-App/szczepienia',
+      {path: '/Pet-Care-App/szczepienia',
         element : <Szczepienia setEvents = {setEvents} events = {events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>
       },
-      {path: '//Pet-Care-App/weterynarz',
+      {path: '/Pet-Care-App/weterynarz',
         element : <Weterynarz setEvents = {setEvents} events ={events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>
       },
-      {path: '//Pet-Care-App/wydatki',
+      {path: '/Pet-Care-App/wydatki',
         element : <Wydatki money = {money} sum = {sum} handlePushToSum = {handlePushToSum} setSum = {setSum}/>
       },
-      {path: '//Pet-Care-App/lekarstwa',
+      {path: '/Pet-Care-App/lekarstwa',
         element : <Lekarstwa meds = {meds} handlePushMedicine = {handlePushMedicine}/>
       },
-      {path: '//Pet-Care-App/notatki',
+      {path: '/Pet-Care-App/notatki',
         element : <Notatki handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes}/>
       },
-      {path: '//Pet-Care-App/waga',
+      {path: '/Pet-Care-App/waga',
         element : <Waga  handlePushEvent = {handlePushEvent}/>
       }
      ])
