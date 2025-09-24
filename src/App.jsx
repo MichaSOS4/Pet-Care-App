@@ -65,28 +65,28 @@ const handlePushToSum = (incomingSum, incomingMoney) => {
 
 };
 const router = createHashRouter([
-      {path: '/Pet-Care-App/kalendarz',
+      {path: '/kalendarz',
         element : <Kalendarz handlePushEvent = {handlePushEvent} handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes} events = {events}/>
       },
-      {path: '/Pet-Care-App',
+      {path: '/',
         element : <HomePage theme = {theme} setTheme = {setTheme}/>
       },
-      {path: '/Pet-Care-App/szczepienia',
+      {path: '/szczepienia',
         element : <Szczepienia setEvents = {setEvents} events = {events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>
       },
-      {path: '/Pet-Care-App/weterynarz',
+      {path: '/weterynarz',
         element : <Weterynarz setEvents = {setEvents} events ={events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>
       },
-      {path: '/Pet-Care-App/wydatki',
+      {path: '/wydatki',
         element : <Wydatki money = {money} sum = {sum} handlePushToSum = {handlePushToSum} setSum = {setSum}/>
       },
-      {path: '/Pet-Care-App/lekarstwa',
+      {path: '/lekarstwa',
         element : <Lekarstwa meds = {meds} handlePushMedicine = {handlePushMedicine}/>
       },
-      {path: '/Pet-Care-App/notatki',
+      {path: '/notatki',
         element : <Notatki handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes}/>
       },
-      {path: '/Pet-Care-App/waga',
+      {path: '/waga',
         element : <Waga  handlePushEvent = {handlePushEvent}/>
       }
      ])
