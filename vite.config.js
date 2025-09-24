@@ -6,7 +6,6 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 
 export default defineConfig({
-  base: '/Pet-Care-App',
   plugins: [react(),
     VitePWA({
       registerType: 'autoUpdate',
