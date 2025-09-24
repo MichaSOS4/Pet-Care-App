@@ -1,0 +1,174 @@
+
+:root{
+    --button-dark-background-color: rgb(17, 17, 17);
+    --button-dark-color: cornsilk;
+    --body-dark-elements-background-color: rgb(44, 42, 42);
+    --list-item-dark-background-color:black;
+    --has-event-background-color:rgb(16, 36, 16);
+    --today-event-background-color:rgb(73, 53, 17);
+
+
+
+
+    --button-light-background-color: rgb(255, 255, 255);
+    --button-light-color: black;
+    --body-light-elements-background-color: #b1b8b9;
+    --list-item-light-background-color:#888c8d;
+    --box-light-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+[data-theme = 'dark'] .settigWrap .mainDiv{
+    
+    box-shadow: 3px 3px 5px 5px black;
+ }
+[data-theme = 'dark'] h2{
+    
+    color: var(--button-dark-color);
+ }
+ [data-theme = 'dark'] h4{
+    
+    color: var(--button-dark-color);
+ }
+ [data-theme = 'dark'] span{
+    
+    color: var(--button-dark-color);
+ }
+ [data-theme = 'dark'] p{
+    
+    color: var(--button-dark-color);
+ }
+a{
+    text-decoration: none;
+}
+
+[data-theme = 'dark'] div{
+    background-color: var(--body-dark-elements-background-color);
+}
+
+
+[data-theme = 'dark'] button{
+    background-color:var(--button-dark-background-color);
+    color: var(--button-dark-color);
+    
+}
+[data-theme = 'dark'] .hasEvent{
+    background-color: var(--has-event-background-color);
+
+}
+[data-theme = 'dark'] .today{
+    background-color: var(--today-event-background-color);
+    width: calc(100% / 7 - 6px);
+    height: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+     text-align: center;
+     margin: 3px;
+     line-height: 50px;
+     position: relative;
+     border-width: 3px;
+     font-size: 15px;
+     box-shadow: 2px 2px 5px 5px black;
+}
+[data-theme = 'dark'] .logoText{
+    font-size: 25px;
+    
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--button-dark-color);
+}
+
+
+
+
+
+
+
+[data-theme = 'light'] nav div{
+    background-color: transparent;
+    
+}
+[data-theme = 'light'] div{
+    background-color: var(--body-light-elements-background-color);
+    
+}
+[data-theme = 'light'] h2{
+    
+    color: var(--button-light-color);
+}
+[data-theme = 'light'] h4{
+    
+    color: var(--button-light-color);
+}
+[data-theme = 'light'] p{
+    
+    color: var(--button-light-color);
+}
+[data-theme = 'light'] span{
+    
+    color: var(--button-light-color);
+}
+[data-theme = 'light'] html{
+    
+    background-color: var(--body-light-elements-background-color);
+}
+
+
+
+
+[data-theme = 'light'] button{
+    background-color:var(--button-light-background-color);
+    color: var(--button-light-color);
+    box-shadow: var(--box-light-shadow);
+    border: none;
+    text-decoration: none;
+}
+[data-theme = 'light'] .hasEvent{
+    background-color: var(--has-event-background-color);
+    color: white;
+
+}
+[data-theme = 'light'] nav{
+    background-color:var(--body-light-elements-background-color);
+    color: var(--button-light-color);
+    box-shadow: var(--box-light-shadow);
+}
+[data-theme = 'light'] nav h4{
+    
+    color: var(--button-light-color);
+}
+[data-theme = 'light'] .logoText{
+    font-size: 25px;
+    
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--button-light-color);
+}
+[data-theme = 'light'] .today{
+    background-color: var(--today-event-background-color);
+    width: calc(100% / 7 - 6px);
+    height: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+     text-align: center;
+     margin: 3px;
+     line-height: 50px;
+     position: relative;
+     border-width: 3px;
+     font-size: 15px;
+     box-shadow: 2px 2px 5px 5px black;
+     color: white;
+}
+[data-theme = 'light'] li{
+    background-color: var(--list-item-light-background-color);
+    color: var(--button-light-color);
+}
+[data-theme = 'light'] input{
+    background-color: white;
+    color: var(--button-light-color);
+    box-shadow: var(--box-light-shadow);
+}
+[data-theme = 'light'] textarea{
+    background-color: white;
+    color: var(--button-light-color);
+    box-shadow: var(--box-light-shadow);
+}

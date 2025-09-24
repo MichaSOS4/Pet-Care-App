@@ -1,0 +1,33 @@
+
+.list{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+
+.listItem{
+    width: 80%;
+    list-style: none;
+    background-color: rgb(51, 48, 48);
+    box-shadow: 5px 5px 5px 5px black;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: cornsilk;
+    position: relative;
+}
+.moneyListTitle{
+ font-size: 19px;
+ color: cornsilk;
+ margin: 20px 0;
+ text-align: center;
+}
+span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}

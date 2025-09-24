@@ -1,0 +1,43 @@
+.wetForm{
+    margin-top: 30px;
+display: flex;
+flex-direction: column;
+gap: 40px;
+justify-content: center;
+align-items: center;
+
+}
+
+.back{
+   align-self: flex-start;
+   margin-left: 10%;
+   padding: 5px 10px;
+   color: cornsilk;
+   border-radius: 10px;
+   font-size: 16px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+}
+.weightForminput{
+   padding: 10px 20px;
+   font-size: 20px;
+   background-color: transparent;
+   box-shadow: 10px 10px 10px 6px black;
+   border: none;
+   color: cornsilk;
+   width: 90%;
+}
+.saveWeightBtn{
+    background-color: rebeccapurple;
+    padding: 10px 20px;
+    border: none;
+    box-shadow:10px 10px 10px 6px black ;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+}

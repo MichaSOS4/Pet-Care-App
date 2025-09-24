@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.linkWrapper{
+  
+  padding: 20px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+ 
+
+}
+a{
+  width: 80%;
+}
+.firstLink{
+  margin-top: 20px;
+}
+.linkTo{
+  /* padding: 40px; */
+ 
+  flex-grow: 1;
+ 
+  
+  z-index: 0;
+  
+  border-radius: 12px;
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%
+  
+  
+    
+}
+.linkBtn{
+
+  width: 100%;
+  height: 100%;
+  padding: 10px 30px;
+  background-color: rgb(17, 17, 17);
+  color: cornsilk;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  /* border: none; */
+  /* outline: none; */
+  gap: 5px;
+  border-radius: 12px;
+  box-shadow: 10px 10px 10px 5px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}

@@ -1,0 +1,37 @@
+.mainDiv{
+  overflow: hidden;
+   min-height: 100vh;
+    background-color: rgb(44, 42, 42);
+    
+    width: 100vw;
+
+   
+}
+.wrapper{
+    max-width: 600px;
+}
+.addVisitBtn{
+        padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 20px;
+    
+    color: cornsilk;
+    box-shadow: 7px 7px 10px 5px black;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+ .btnAndListWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+} 

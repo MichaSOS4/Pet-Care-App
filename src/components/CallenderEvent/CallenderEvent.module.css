@@ -1,0 +1,130 @@
+.eventWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    
+}
+.eventNoteWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 7px 7px 10px 3px black;
+    width: 90%;
+    
+    
+
+}
+.eventNote{
+    min-height: 100px;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 10px;
+    color: cornsilk;
+    font-size: 17px;
+}
+.saveNote{
+    padding: 5px 10px;
+    background-color: transparent;
+    border-width: 3px;
+    box-shadow: 7px 7px 5px 5px black;
+    border-radius: 10px;
+    color: cornsilk;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.eventTitle{
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+    color: cornsilk;
+
+}
+.linkBtn{
+
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 15px;
+    background-color: transparent;
+    color: cornsilk;
+    border-width: 3px;
+    box-shadow: 7px 7px 10px 5px black;
+    font-size: 20px;
+
+}
+.back{
+    padding: 5px 10px;
+    font-size: 16px;
+    color: cornsilk;
+    border-radius: 10px;
+    align-self: flex-end;
+    
+}
+.linkTo{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+   
+}
+.eventList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    
+    
+}
+
+.addEvent{
+    width: 80%;
+    padding: 5px 20px;
+    border-radius: 15px;
+    background-color: transparent;
+    color: cornsilk;
+    border-width: 3px;
+    box-shadow: 7px 7px 10px 5px black;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.events{
+    width: 80%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.event{
+    
+    list-style: none;
+    background-color: rgb(51, 48, 48);
+    box-shadow: 5px 5px 5px 5px black;
+    padding: 20px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: cornsilk;
+    min-height: 100%;
+    
+}
+.noteDate{
+    background-color: transparent;
+    padding: 5px;
+    color: cornsilk;
+    font-size: 16px;
+}

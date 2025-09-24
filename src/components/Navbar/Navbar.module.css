@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100vh;
+    position: relative;
+    max-width: 600px;
+}
+
+.bar{
+
+   background-color: rgb(44, 42, 42);
+   min-height: 20vh;
+   padding: 20px;
+   border-bottom: 2px solid rgb(59, 59, 59);
+   position: fixed;
+   top: 0;  
+   left: 0;
+   z-index: 999;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   
+   
+   
+   
+   
+
+}
+
+.settigBtn{
+    border-radius: 50%;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    padding: 10px;
+}
+.helloTitle{
+    color: cornsilk;
+    font-size: 22px;
+    text-align: left;
+    margin-top:30px ;
+}
+.backToHome{
+    padding: 5px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: cornsilk;
+    box-shadow: 7px 7px 10px 5px black;
+    position: relative;
+    z-index: 1;
+}
+.backToCallender{
+    padding: 5px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: cornsilk;
+    box-shadow: 7px 7px 10px 5px black;
+    position: relative;
+    z-index: 1;
+}
+.mainBtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (min-width:765px){
+    .helloTitle{
+        text-align: center;
+    }
+}

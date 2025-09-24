@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mainTitle{
+    color: cornsilk;
+    letter-spacing: 1px;
+    max-width: 600px;
+}
+.firstVisitPopUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgb(37, 36, 36);
+    align-items: center;
+    
+}
+.firstVisitForm{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 600px;
+    
+}
+.inputField{
+    padding: 10px 20px;
+   font-size: 20px;
+   background-color: transparent;
+   box-shadow: 10px 10px 10px 6px black;
+   border: none;
+   color: cornsilk;
+   width: 100%;
+}
+.submitBtn , .lightBtn, .darkBtn{
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: transparent;
+    
+    border-radius: 20px;
+    color: cornsilk;
+    
+}
+.wrapTheme{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.themeTitle{
+    color: cornsilk;
+    font-size: 16px;
+    text-align: center;
+}

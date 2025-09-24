@@ -1,0 +1,185 @@
+.wrapper{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.eventList{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.events{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+}
+.addEventFromList{
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.event{
+    
+    list-style: none;
+    background-color: rgb(51, 48, 48);
+    box-shadow: 5px 5px 5px 5px black;
+    padding: 20px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: cornsilk;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+    width: 90%;
+    
+    
+}
+.callenderWrap{
+    display: flex  ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    color: cornsilk;
+    gap: 20px;
+}
+.monthAndYear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 17px;
+}
+.days{
+    width: 100%;
+    font-weight: bold;
+    
+    box-sizing: border-box;
+    
+    
+    
+}
+.day{
+    width: calc(100% / 7 - 6px);
+    box-sizing: border-box;
+    display: inline-block;
+    
+    
+    text-align: center;
+    margin: 3px;
+    position: relative;
+
+}
+.board{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+    
+    
+    
+
+}
+.boardDay{
+    width: calc(100% / 7 - 6px);
+    height: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+    border-width: 3px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+     */
+     text-align: center;
+     margin: 3px;
+     line-height: 50px;
+     position: relative;
+     font-weight: bold;
+     background-color: transparent;
+     color: cornsilk;
+     font-size: 15px;
+     box-shadow: 2px 2px 5px 5px black;
+    
+}
+.emptyBoardDay{
+     width: calc(100% / 7 - 6px);
+    height: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+     */
+     
+     margin: 3px;
+     cursor: pointer;
+}
+.prev,.next{
+    padding: 5px 20px;
+    background-color: transparent;
+    color: cornsilk;
+}
+.today{
+    width: calc(100% / 7 - 6px);
+    height: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+    
+    background-color: rgb(233, 188, 7);
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+     */
+     text-align: center;
+     margin: 3px;
+     line-height: 50px;
+     color: gray;
+     position: relative;
+     border-width: 3px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+     */
+     
+     color: cornsilk;
+     font-size: 15px;
+     box-shadow: 2px 2px 5px 5px black;
+    
+}
+.hasEvent {
+    background-color: rgb(12, 158, 56); /* Przykładowy styl dla dni z wydarzeniami */
+    color: white;
+}
+.eventsNumber{
+    position: absolute;
+    padding: 5px;
+    color: white;
+    top: -20px;
+    right: -3px;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: transparent;
+}
+

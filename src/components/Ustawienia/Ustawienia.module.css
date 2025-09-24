@@ -1,0 +1,69 @@
+.settigWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.mainDiv{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    
+    
+    
+}
+.hideDiv{
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+    scale: 0;
+    transition: .4s linear;
+    display: none;
+    
+}
+.settigBtn{
+    padding: 8px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 7px 7px 10px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.settigInput{
+    padding: 5px 5px;
+   font-size: 19px;
+   background-color: transparent;
+   box-shadow: 10px 10px 10px 6px black;
+   border: none;
+   color: cornsilk;
+   max-width: 60%;
+}
+.mainSettigBtn{
+    width: 70%;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+.settigsTitle{
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.mainDiv.active .hideDiv{
+    display: flex;
+   scale: 1;
+    transition: .3s;
+}
+.mainDiv.active{
+    
+    padding: 30px 10px;
+    border: 1px solid black;
+}

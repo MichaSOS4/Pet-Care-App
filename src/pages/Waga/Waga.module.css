@@ -1,0 +1,46 @@
+.wagaPageWrapper{
+    background-color: black;
+}
+.mainDiv{
+  overflow: hidden;
+   min-height: 100vh;
+    background-color: rgb(44, 42, 42);
+    max-width: 600px;
+    position: relative;
+    margin: 0 auto;
+    
+    
+   
+}
+.addWeightBtn{
+    
+        padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 20px;
+    /* border: none; */
+    color: cornsilk;
+    box-shadow: 7px 7px 10px 5px black;
+    margin: 10px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    
+}
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
