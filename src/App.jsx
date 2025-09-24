@@ -89,11 +89,11 @@ const router = createHashRouter([
       {path: '/waga',
         element : <Waga  handlePushEvent = {handlePushEvent}/>
       }
-     ])
+     ],{basename: '/Pet-Care-App'})
 
   return (
     <>
-     <RouterProvider router = {router}>
+     <RouterProvider  router = {router}>
     
      </RouterProvider>
     
