@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { createHashRouter, RouterProvider } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import Notatki from './pages/Notatki/Notatki'
 import Wydatki from './pages/Wydatki/Wydatki'
 import Weterynarz from './pages/Weterynarz/Weterynarz'
@@ -65,37 +65,44 @@ const handlePushToSum = (incomingSum, incomingMoney) => {
 
 };
 const router = createHashRouter([
-      {path: '/Pet-Care-App/kalendarz',
+      {path: '/kalendarz',
         element : <Kalendarz handlePushEvent = {handlePushEvent} handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes} events = {events}/>
       },
-      {path: '/Pet-Care-App',
+      {path: '/',
         element : <HomePage theme = {theme} setTheme = {setTheme}/>
       },
-      {path: '/Pet-Care-App/szczepienia',
+      {path: '/szczepienia',
         element : <Szczepienia setEvents = {setEvents} events = {events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>
       },
-      {path: '/Pet-Care-App/weterynarz',
+      {path: '/weterynarz',
         element : <Weterynarz setEvents = {setEvents} events ={events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>
       },
-      {path: '/Pet-Care-App/wydatki',
+      {path: '/wydatki',
         element : <Wydatki money = {money} sum = {sum} handlePushToSum = {handlePushToSum} setSum = {setSum}/>
       },
-      {path: '/Pet-Care-App/lekarstwa',
+      {path: '/lekarstwa',
         element : <Lekarstwa meds = {meds} handlePushMedicine = {handlePushMedicine}/>
       },
-      {path: '/Pet-Care-App/notatki',
+      {path: '/notatki',
         element : <Notatki handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes}/>
       },
-      {path: '/Pet-Care-App/waga',
+      {path: '/waga',
         element : <Waga  handlePushEvent = {handlePushEvent}/>
       }
-     ],{basename: '/Pet-Care-App'})
+     ])
 
   return (
     <>
-     <RouterProvider  router = {router}>
-    
-     </RouterProvider>
+     <Routes>
+        <Route path = "/kalendarz" element = {<Kalendarz handlePushEvent = {handlePushEvent} handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes} events = {events}/>}/>
+        <Route path = "/" element = {<HomePage theme = {theme} setTheme = {setTheme}/>}/>
+        <Route path = "/szczepienia" element = {<Szczepienia setEvents = {setEvents} events = {events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>}/>
+        <Route path = "/weterynarz" element = {<Weterynarz setEvents = {setEvents} events ={events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>}/>
+        <Route path = "/wydatki" element = {<Wydatki money = {money} sum = {sum} handlePushToSum = {handlePushToSum} setSum = {setSum}/>}/>
+        <Route path = "/lekarstwa" element = {<Lekarstwa meds = {meds} handlePushMedicine = {handlePushMedicine}/>}/>
+        <Route path = "/notatki" element = {<Notatki handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes}/>}/>
+        <Route path = "/waga" element = {<Waga  handlePushEvent = {handlePushEvent}/>}/>
+     </Routes>
     
     </>
   )
