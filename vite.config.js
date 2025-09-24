@@ -14,8 +14,8 @@ export default defineConfig({
         name: 'Dog App',
         short_name: 'DogApp',
         description: 'An app to save your animal details',
-        start_url: '/Pet-Care-App',
-        scope: '/Pet-Care-App/',
+        start_url: '/',
+        scope: '/',
         display: 'standalone',
         icons: [
   {
