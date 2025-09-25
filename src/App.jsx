@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { createHashRouter, RouterProvider } from "react-router-dom"
+import { createHashRouter, RouterProvider,Outlet } from "react-router-dom"
 import Notatki from './pages/Notatki/Notatki'
 import Wydatki from './pages/Wydatki/Wydatki'
 import Weterynarz from './pages/Weterynarz/Weterynarz'
@@ -11,6 +11,10 @@ import Kalendarz from './pages/Callender/Kalendarz'
 import './index.css'
 
 function App() {
+
+  const [userName,setUserName] = useState(localStorage.getItem('user')|| 'User')
+  const [animalName,setAnimalName] = useState(localStorage.getItem('animalName')|| 'Pimpek')
+  const [gatunek,setGatunek] = useState(localStorage.getItem('animal')||'Animal') 
   const [theme,setTheme] = useState(localStorage.getItem('theme')|| 'light')
   const [notes,setNotes] = useState(JSON.parse(localStorage.getItem('notes'))|| [])
   const[meds,setMeds] = useState(JSON.parse(localStorage.getItem('medicine'))|| [])
@@ -62,14 +66,25 @@ const handlePushEvent = (event)=>{
 const handlePushToSum = (incomingSum, incomingMoney) => {
   setMoney(prevMoney => Number(prevMoney) + Number(incomingMoney));
   setSum([incomingSum, ...sum]);
+  
+    
+  
 
 };
+const mainDatas = {
+  userName: userName,
+  setUserName: setUserName,
+  animalName: animalName,
+  setAnimalName:setAnimalName,
+  gatunek:gatunek,
+  setGatunek: setGatunek,
+}
 const router = createHashRouter([
       {path: '/kalendarz',
         element : <Kalendarz handlePushEvent = {handlePushEvent} handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes} events = {events}/>
       },
       {path: '/',
-        element : <HomePage theme = {theme} setTheme = {setTheme}/>
+        element : <HomePage setGatunek = {setGatunek} setAnimalName = {setAnimalName} setUserName = {setUserName} gatunek = {gatunek} userName ={userName} animalName = {animalName} theme = {theme} setTheme = {setTheme}/>
       },
       {path: '/szczepienia',
         element : <Szczepienia setEvents = {setEvents} events = {events} handlePushEvent = {handlePushEvent} setSum = {setSum} handlePushToSum = {handlePushToSum} sum = {sum}/>
@@ -93,8 +108,9 @@ const router = createHashRouter([
 
   return (
     <>
-     <RouterProvider  router = {router}>
     
+     <RouterProvider  router = {router}>
+      
      </RouterProvider>
     
     </>

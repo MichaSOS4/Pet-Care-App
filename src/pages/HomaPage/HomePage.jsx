@@ -8,16 +8,14 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function HomePage(props){
-    const [userName,setUserName] = useState('')
- const [animal,setAnimal] = useState('')
- const [userAnimalName,setUserAnimalName] = useState('')
+    
     const [settigsOn, setSettigsOn] = useState('off')
     const [isFirstVisit,setFirstVisit] = useState(localStorage.getItem('firstVisit')|| 'first')
     const nav = useRef(null)
     const laterContent = useRef(null)
     const[navText,setNavText] = useState(()=>{
-        if(localStorage.getItem('user') && localStorage.getItem('animalName')){
-            return `Witaj ${localStorage.getItem('user')}! Jak się miewa Twój   ${localStorage.getItem('animalName')} ?`
+        if(props.userName && props.animalName){
+            return `Witaj ${props.userName}! Jak się miewa    ${props.animalName} ?`
         }
     })
 
@@ -40,7 +38,7 @@ useEffect(()=>{
             
             
         }
-    },[navText])
+    },[navText,props.userName])
 
      useEffect(()=>{
        localStorage.setItem('firstVisit', isFirstVisit)
@@ -49,16 +47,16 @@ useEffect(()=>{
     return(
         <>
             
-            {isFirstVisit == 'first' ? <FirstVisit setUserAnimalName = {setUserAnimalName} setAnimal = {setAnimal} setUserName = {setUserName} theme = {props.theme} setTheme = {props.setTheme} isFirstVisit = {isFirstVisit} setFirstVisit = {setFirstVisit} /> :
+            {isFirstVisit == 'first' ? <FirstVisit  setGatunek = {props.setGatunek} setAnimalName = {props.setAnimalName} setUserName = {props.setUserName} gatunek = {props.gatunek} userName ={props.userName} animalName = {props.animalName}  theme = {props.theme} setTheme = {props.setTheme} isFirstVisit = {isFirstVisit} setFirstVisit = {setFirstVisit} /> :
             <div className={styles.homePageWrapper}>
                 {settigsOn == 'off'? <div className={styles.navB}>
-                    <Navbar settigsOn = {settigsOn} setSettigsOn = {setSettigsOn}  ref = {nav} title = {navText}></Navbar>
+                    <Navbar  setGatunek = {props.setGatunek} setAnimalName = {props.setAnimalName} setUserName = {props.setUserName} gatunek = {props.gatunek} userName ={props.userName} animalName = {props.animalName} settigsOn = {settigsOn} setSettigsOn = {setSettigsOn}  ref = {nav} title = {navText}></Navbar>
                     <div className='.menulater'>
                     <Menu className = {styles.later} ref = {laterContent}/>
                     </div>
                     </div> : 
                         
-                         <Ustawienia setUserAnimalName = {setUserAnimalName} setAnimal = {setAnimal} setUserName = {setUserName} theme = {props.theme} setTheme = {props.setTheme} settigsOn = {settigsOn} setSettigsOn = {setSettigsOn}></Ustawienia> 
+                         <Ustawienia  setGatunek = {props.setGatunek} setAnimalName = {props.setAnimalName} setUserName = {props.setUserName} gatunek = {props.gatunek} userName ={props.userName} animalName = {props.animalName} theme = {props.theme} setTheme = {props.setTheme} settigsOn = {settigsOn} setSettigsOn = {setSettigsOn}></Ustawienia> 
                          }
                 
                 </div>

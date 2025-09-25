@@ -45,7 +45,7 @@ function Lekarstwa(props){
     }
     const saveMed = (e)=>{
         e.preventDefault()
-        if(nameInput.current.value && reasonInput.current.value&& zaleceniaInput.current.value && startDateInput.current.value && priceInput.current.value){
+        if(nameInput.current.value && reasonInput.current.value&& zaleceniaInput.current.value && startDateInput.current.value && priceInput.current.value ){
             const medicine = {
                 name:nameInput.current.value,
                 reason: reasonInput.current.value,
@@ -79,7 +79,7 @@ function Lekarstwa(props){
         <div  className = {styles.lekarstwaWrapper}>
                 <Navbar ref = {nav} title = {navText}></Navbar>
             <div ref = {laterContent}>
-                {props.meds.length & flag ? <div>
+                {props.meds.length && flag ? <div>
 
                     {selectedMed ? <div className={styles.moreInfoMed }>
                         <button className = {styles.back} onClick={resetSelectedMedandBackToList}><Undo2/>wstecz</button>
@@ -88,7 +88,7 @@ function Lekarstwa(props){
                     <p><b>Zalecenia/Dawkowanie:</b>{selectedMed.zalecenia} </p>
                     <p><b>Cena leku:</b>{selectedMed.price} </p>
                     <p><b>Rozpoczęcie dawkowania:</b>{selectedMed.start} </p>
-                    {selectedMed.end.length ? <p><b>Zakończenie dawkowania</b></p> : null}
+                    {selectedMed.end.length ? <p><b>Zakończenie dawkowania</b> {selectedMed.end}</p> : <p><b>Zakończenie dawkowania</b> {'Brak daty'}</p>}
                     </div>: null }
                     
                     <div className={selectedMed ? styles.listHide : styles.listShow}>

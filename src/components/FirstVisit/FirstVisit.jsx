@@ -30,8 +30,8 @@ const  saveChoicesAndClosePopUp = (e)=>{
         
         if(user.current.value && spices.current.value&&animalName.current.value){
             props.setUserName(user.current.value)
-            props.setAnimal(spices.current.value)
-            props.setUserAnimalName(animalName.current.value)
+            props.setGatunek(spices.current.value)
+            props.setAnimalName(animalName.current.value)
             props.setFirstVisit('notFirst')
             
             
@@ -40,7 +40,7 @@ const  saveChoicesAndClosePopUp = (e)=>{
             localStorage.setItem('animal',spices.current.value )
             localStorage.setItem('animalName',animalName.current.value)
             localStorage.setItem('firstVisit', 'notFirst')
-            window.location.reload()
+            // window.location.reload()
             
             // toast.info('Zapisywanie...', {
             //             position: "top-right",
@@ -79,19 +79,21 @@ const  saveChoicesAndClosePopUp = (e)=>{
         <>
             <div ref = {popUp} className={styles.firstVisitPopUp}>
                 <h2 className= {styles.mainTitle}>Hej, <br></br> widzę, że pierwszy raz korzystasz z mojej aplikacij dlatego musisz odpowiedzieć na kilka pytań... </h2>
-            <form action="#" className={styles.firstVisitForm}>
+            <form  className={styles.firstVisitForm}>
                 
                 <input className= {styles.inputField} type="text" ref = {user} placeholder="Twoje imię" />
                 <input className= {styles.inputField} type="text" ref = {spices} placeholder="Gatunek twojego pupila" />
                 <input className= {styles.inputField} type="text" ref = {animalName} placeholder="Imię twojego zwierzaka" />
                 <h4 className={styles.themeTitle}>Jaki tryb aplikacij preferujesz ?</h4>
-                <div className={styles.wrapTheme}>
+                
+                
+            </form>
+            <div className={styles.wrapTheme}>
                     
                     <button onClick={(e)=>{changeThemeToLight(e)}} className={styles.lightBtn}>Light</button>
                     <button onClick={(e)=>{changeThemeToDark(e)}} className={styles.darkBtn}>Dark</button>
                 </div>
-                <button className={styles.submitBtn} type="submit" onClick={(e)=>{saveChoicesAndClosePopUp(e)}}>Zapisz!</button>
-            </form>
+                <button className={styles.submitBtn} type="submit" onClick={(e)=>{saveChoicesAndClosePopUp(e)}}>Zapisz!</button>r
             
         
             </div>  

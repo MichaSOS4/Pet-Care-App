@@ -2,11 +2,15 @@ import { forwardRef, useEffect, useState } from "react"
 
 import styles from './Navbar.module.css'
 import Logo from "../Logo/Logo"
-import { HashRouter, Routes, Route, Link } from "react-router-dom"
+import { HashRouter, Routes, Route, Link, useLocation,useOutletContext } from "react-router-dom"
 import { House,CalendarDays,Settings } from "lucide-react"
 
 
 const Navbar = forwardRef((props, ref) => {
+
+
+    
+    
     const changeSettigs = ()=>{
         if(props.settigsOn == 'off'){
             props.setSettigsOn('on')
@@ -32,7 +36,7 @@ const Navbar = forwardRef((props, ref) => {
         
         <nav className={styles.bar} ref={ref}>
             <div className={styles.wrapper}>
-            {props.title.includes('Witaj') ? <button onClick = {changeSettigs} className={styles.settigBtn}><Settings /></button> : null }
+            {useLocation().pathname == '/' ? <button onClick = {changeSettigs} className={styles.settigBtn}><Settings /></button> : null }
             
            <div className="logoWrap"><Logo /></div> 
            <div className = {styles.mainBtns}>
