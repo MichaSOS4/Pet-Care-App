@@ -12,6 +12,7 @@ function WeightForm(props) {
         if(time.current.value&& kg.current.value){
         
             const key = Math.random()
+            
             const eventDatas = {
             date: time.current.value,
             type: 'Ważenie pupila',

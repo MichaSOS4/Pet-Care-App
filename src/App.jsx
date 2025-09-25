@@ -84,7 +84,7 @@ const router = createHashRouter([
         element : <Lekarstwa meds = {meds} handlePushMedicine = {handlePushMedicine}/>
       },
       {path: '/notatki',
-        element : <Notatki handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes}/>
+        element : <Notatki handlePushEvent = {handlePushEvent} handlePushNote = {handlePushNote} setNotes = {setNotes} notes = {notes}/>
       },
       {path: '/waga',
         element : <Waga  handlePushEvent = {handlePushEvent}/>

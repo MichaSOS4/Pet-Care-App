@@ -28,12 +28,22 @@ const newNote = {
     note: note.current.value,
     date: dateInput.current.value
 }
+const key = Math.random()
+            
+            const eventDatas = {
+            date: dateInput.current.value,
+            value:note.current.value,
+            type: 'Notatka',
+            key:key
+        }
+        props.handlePushEvent(eventDatas)
 props.handlePushNote(newNote)
 note.current.value = ''
 dateInput.current.value = ''
 
 }
 setFlag(prevFlag => prevFlag = true)
+
 }
 
 
