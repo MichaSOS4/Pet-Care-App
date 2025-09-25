@@ -18,6 +18,11 @@ function HomePage(props){
             return `Witaj ${props.userName}! Jak się miewa    ${props.animalName} ?`
         }
     })
+    useEffect(()=>{
+        if(props.userName && props.animalName){
+        setNavText( `Witaj ${props.userName}! Jak się miewa    ${props.animalName} ?`)
+        }
+    },[props.userName,props.animalName])
 
 
 

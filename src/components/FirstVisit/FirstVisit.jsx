@@ -29,7 +29,7 @@ const  saveChoicesAndClosePopUp = (e)=>{
         e.preventDefault()
         
         if(user.current.value && spices.current.value&&animalName.current.value){
-            props.setUserName(user.current.value)
+            props.setUserName( user.current.value)
             props.setGatunek(spices.current.value)
             props.setAnimalName(animalName.current.value)
             props.setFirstVisit('notFirst')
@@ -93,7 +93,7 @@ const  saveChoicesAndClosePopUp = (e)=>{
                     <button onClick={(e)=>{changeThemeToLight(e)}} className={styles.lightBtn}>Light</button>
                     <button onClick={(e)=>{changeThemeToDark(e)}} className={styles.darkBtn}>Dark</button>
                 </div>
-                <button className={styles.submitBtn} type="submit" onClick={(e)=>{saveChoicesAndClosePopUp(e)}}>Zapisz!</button>r
+                <button className={styles.submitBtn} type="submit" onClick={(e)=>{saveChoicesAndClosePopUp(e)}}>Zapisz!</button>
             
         
             </div>  
