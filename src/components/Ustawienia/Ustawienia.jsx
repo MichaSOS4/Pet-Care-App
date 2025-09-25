@@ -49,7 +49,7 @@ const changeAnimalName = ()=>{
 } 
 const changeSpiece = ()=>{
     if(spiece.current.value.length){
-    props.setUserName(spiece.current.value)
+    props.setGatunek(spiece.current.value)
     localStorage.setItem('animal', spiece.current.value)
     spiece.current.value = ''
     // setSomethingChanged(true)
