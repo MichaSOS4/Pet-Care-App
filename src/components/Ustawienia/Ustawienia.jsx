@@ -26,27 +26,36 @@ useEffect(()=>{
 },[navText])
 
 const changeUserName = ()=>{
-    props.setUserName(user.current.value)
+    if(user.current.value.length){
+        props.setUserName(user.current.value)
     localStorage.setItem('user', user.current.value)
     user.current.value = ''
-    setSomethingChanged(true)
+    // setSomethingChanged(true)
     setDiv('0')
+    }
+    
     
     
 }
 const changeAnimalName = ()=>{
-    props.setUserName(user.current.value)
+    if(animal.current.value.length){
+    props.setAnimalName(animal.current.value)
     localStorage.setItem('animalName', animal.current.value)
     animal.current.value = ''
-    setSomethingChanged(true)
+    // setSomethingChanged(true)
     setDiv('0')
+    }
+    
 } 
 const changeSpiece = ()=>{
+    if(spiece.current.value.length){
     props.setUserName(spiece.current.value)
-    localStorage.setItem('animalName', animal.current.value)
+    localStorage.setItem('animal', spiece.current.value)
     spiece.current.value = ''
-    setSomethingChanged(true)
+    // setSomethingChanged(true)
     setDiv('0')
+    }
+   
 }
     const changeThemeToDark = ()=>{
         
