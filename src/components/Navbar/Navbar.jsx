@@ -4,6 +4,7 @@ import styles from './Navbar.module.css'
 import Logo from "../Logo/Logo"
 import { HashRouter, Routes, Route, Link, useLocation,useOutletContext } from "react-router-dom"
 import { House,CalendarDays,Settings } from "lucide-react"
+import InstallBtn from "../InstallBtn/InstallBtn"
 
 
 const Navbar = forwardRef((props, ref) => {
@@ -36,6 +37,7 @@ const Navbar = forwardRef((props, ref) => {
         
         <nav className={styles.bar} ref={ref}>
             <div className={styles.wrapper}>
+                <InstallBtn/>
             {useLocation().pathname == '/' ? <button onClick = {changeSettigs} className={styles.settigBtn}><Settings /></button> : null }
             
            <div className="logoWrap"><Logo /></div> 
