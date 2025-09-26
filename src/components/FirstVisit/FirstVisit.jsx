@@ -1,7 +1,7 @@
 import { useState, useEffect,useRef } from "react"
 import styles from './FirstVisit.module.css'
 import { ToastContainer, toast ,Bounce} from 'react-toastify';
-
+import InstallBtn from "../InstallBtn/InstallBtn";
 
 
 
@@ -78,6 +78,7 @@ const  saveChoicesAndClosePopUp = (e)=>{
 
         <>
             <div ref = {popUp} className={styles.firstVisitPopUp}>
+                <InstallBtn></InstallBtn>
                 <h2 className= {styles.mainTitle}>Hej, <br></br> widzę, że pierwszy raz korzystasz z mojej aplikacij dlatego musisz odpowiedzieć na kilka pytań... </h2>
             <form  className={styles.firstVisitForm}>
                 

@@ -17,13 +17,13 @@ const installApp = async ()=>{
 
 }
 useEffect(()=>{
-    const handleCatchEvent = (e)=>{
+    
+
+    window.addEventListener('beforeinstallprompt', (e)=>{
         e.preventDefault()
         setSeeButton(true)
         setInstallEvent(e)
-    }
-
-    window.addEventListener('beforeinstallprompt', (e)=>{handleCatchEvent(e)})
+    })
 },[])
 
 

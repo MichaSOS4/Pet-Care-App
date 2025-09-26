@@ -37,7 +37,7 @@ const Navbar = forwardRef((props, ref) => {
         
         <nav className={styles.bar} ref={ref}>
             <div className={styles.wrapper}>
-                <InstallBtn/>
+                
             {useLocation().pathname == '/' ? <button onClick = {changeSettigs} className={styles.settigBtn}><Settings /></button> : null }
             
            <div className="logoWrap"><Logo /></div> 
