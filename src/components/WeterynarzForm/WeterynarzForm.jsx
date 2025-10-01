@@ -38,10 +38,12 @@ useEffect(()=>{
     if(price.current.value&& reason.current.value&& place.current.value){
         props.setFlag(true)
         props.setNavText(`Oto wszystkie wizyty ${localStorage.getItem('animalName')}`)
+        console.log(typeof  parseFloat(price.current.value) )
+        const incomingPrice = parseFloat(price.current.value).toFixed(2)
         const visit  = {
             place: place.current.value,
             reason: reason.current.value,
-            price: price.current.value,
+            price: incomingPrice,
             note: note.current.value,
             key : key
         }

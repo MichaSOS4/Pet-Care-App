@@ -46,11 +46,14 @@ function Lekarstwa(props){
     const saveMed = (e)=>{
         e.preventDefault()
         if(nameInput.current.value && reasonInput.current.value&& zaleceniaInput.current.value && startDateInput.current.value && priceInput.current.value ){
+            const incomingPrice = parseFloat(priceInput.current.value).toFixed(2)
             const medicine = {
+
+        
                 name:nameInput.current.value,
                 reason: reasonInput.current.value,
                 zalecenia:zaleceniaInput.current.value,
-                price: priceInput.current.value,
+                price: incomingPrice,
                 start: startDateInput.current.value,
                 end: endDateInput.current.value
             }
